@@ -5,7 +5,7 @@ import { KioskModule } from './kiosk/kiosk.module';
 import { DatabaseModule } from './database/database.module';
 
 @Module({
-  imports: [ConfigModule.forRoot(), DatabaseModule, CommonModule, KioskModule],
+  imports: [ConfigModule.forRoot({ isGlobal: true }), DatabaseModule, CommonModule, KioskModule],
   controllers: [],
   providers: [],
 })
